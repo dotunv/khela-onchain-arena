@@ -1,21 +1,19 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Trophy, BarChart3, PenSquare, Database, Zap } from 'lucide-react';
+import { Trophy, BarChart3, PenSquare, Database, Zap, Globe, Server, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getMockLiveScores } from '@/services/scoresApi';
 import ScoreCard from '@/components/ScoreCard';
 
 const Index = () => {
-  // Get sample scores for display on the homepage
   const featuredMatches = getMockLiveScores().slice(0, 2);
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-sports-gradient py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-hero-pattern opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81')] bg-cover bg-center opacity-10"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -43,17 +41,17 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Platform Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard 
-              icon={<BarChart3 className="h-8 w-8 text-primary" />}
+              icon={<Globe className="h-8 w-8 text-primary" />}
               title="Live Sports Data"
               description="Get real-time scores and statistics from major sports leagues around the world."
             />
             <FeatureCard 
-              icon={<Database className="h-8 w-8 text-primary" />}
+              icon={<Server className="h-8 w-8 text-primary" />}
               title="Decentralized Storage"
               description="All data is stored permanently on Filecoin via Lighthouse, ensuring censorship resistance."
             />
             <FeatureCard 
-              icon={<PenSquare className="h-8 w-8 text-primary" />}
+              icon={<Shield className="h-8 w-8 text-primary" />}
               title="Sports Publishing"
               description="Apply to become a verified publisher and share your sports analysis and research."
             />
@@ -82,7 +80,7 @@ const Index = () => {
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <Zap className="h-12 w-12 text-primary mx-auto mb-4" />
+            <BarChart3 className="h-12 w-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold mb-4">Web3 Integration</h2>
             <p className="text-lg text-gray-600 mb-8">
               Khela leverages Web3 technology to provide a secure, transparent, and censorship-resistant
