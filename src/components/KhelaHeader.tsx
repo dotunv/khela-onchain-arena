@@ -6,12 +6,12 @@ import { Trophy, BarChart3, PenSquare, Home } from 'lucide-react';
 
 const KhelaHeader: React.FC = () => {
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800">
+    <header className="border-b border-white/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Trophy className="w-8 h-8 text-primary" />
-            <Link to="/" className="text-2xl font-bold bg-sports-gradient bg-clip-text text-transparent">
+            <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary/60">
               KHELA
             </Link>
           </div>
@@ -45,7 +45,7 @@ const NavLink: React.FC<NavLinkProps> = ({ to, label, icon }) => {
   return (
     <Link 
       to={to} 
-      className="flex items-center gap-1.5 text-gray-700 hover:text-primary transition-colors"
+      className="flex items-center gap-1.5 text-white/70 hover:text-primary transition-colors"
     >
       {icon}
       <span>{label}</span>
