@@ -88,7 +88,14 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'bounce-slow': 'bounce 3s infinite',
+				'spin-slow': 'spin 3s linear infinite'
+			},
+			backgroundImage: {
+				'sports-gradient': 'linear-gradient(to right, #8B5CF6, #1EAEDB)',
+				'hero-pattern': 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6))'
 			}
 		}
 	},
