@@ -6,15 +6,15 @@ import {
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum } from 'wagmi/chains';
+import { mainnet, polygon, optimism, arbitrum, filecoinCalibration } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, publicClient } = configureChains(
-  [mainnet, polygon, optimism, arbitrum],
+  [mainnet, polygon, optimism, arbitrum, filecoinCalibration],
   [publicProvider()]
 );
 
-const projectId = 'khela-onchain-arena'; // Your project ID
+const projectId = 'khela-onchain-arena';
 
 const { connectors } = getDefaultWallets({
   appName: 'Khela Onchain Arena',
@@ -29,3 +29,4 @@ export const wagmiConfig = createConfig({
 });
 
 export { chains, RainbowKitProvider };
+
